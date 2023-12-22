@@ -1,64 +1,37 @@
-import {
-  Container,
-  Nav,
-  Button,
-  Navigation,
-  Apresentation,
-  AboutMe,
-  Technologys,
-  Box,
-} from './styles'
+import { Container, AboutMe, Box, Title, Contact, Button, Grid } from './styles'
 
-import cake from '../../assets/techs/cakephp.jpg'
-import nest from '../../assets/techs/nest.jpg'
-import node from '../../assets/techs/node.png'
-import react from '../../assets/techs/react.png'
-import ReactFloaterJs from 'react-floaterjs'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
 export function Footer() {
   return (
     <Container>
-      <Navigation>
-        <h1>Vínicius Santos</h1>
-        <Nav>
-          <Button>Sobre mim</Button>
-          <Button>Tecnologias</Button>
-          <Button>Ultimos projetos</Button>
-        </Nav>
-      </Navigation>
+      <Title>Contato</Title>
       <AboutMe>
-        <Apresentation>
-          <h1>Desenvolvedor FullStack</h1>
+        <Contact>
+          <Grid>
+            <Box>
+              <Button href="https://github.com/Haasytr">
+                <FaGithub />
+                Github
+              </Button>
+            </Box>
+            <Box>
+              <Button href="https://www.linkedin.com/in/vinicius-oliveira-a666941b1/">
+                <FaLinkedin />
+                LinkedIn
+              </Button>
+            </Box>
+            <Box>
+              <Button href="https://github.com/Haasytr/portfolio">
+                Repositório deste projeto
+              </Button>
+            </Box>
+          </Grid>
           <p>
-            Amo oque faço,sendo especializado tanto em back quanto front end.
-            Essas são algumas da tecnologias que eu já utilizei
+            Irei atualizar este projeto sempre que tiver alguma ideia legal, se
+            quiser compartilhar alguma por favor entre em contato.
           </p>
-        </Apresentation>
-
-        <Technologys>
-          <ReactFloaterJs>
-            <Box>
-              <img src={nest} />
-            </Box>
-            <Box>
-              <img src={react} />
-            </Box>
-
-            <Box>
-              <img src={node} />
-            </Box>
-            <Box>
-              <img src={nest} />
-            </Box>
-            <Box>
-              <img src={react} />
-            </Box>
-
-            <Box>
-              <img src={node} />
-            </Box>
-          </ReactFloaterJs>
-        </Technologys>
+        </Contact>
       </AboutMe>
     </Container>
   )

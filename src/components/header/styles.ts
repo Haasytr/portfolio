@@ -3,17 +3,19 @@ import { styled } from '@stitches/react'
 export const Container = styled('div', {
   color: '#fff',
   height: '80vh',
-  background:
-    'linear-gradient(180deg, hsla(243, 96%, 56%, 1) 6%, hsla(196, 97%, 65%, 1) 100%);',
-})
+  background: 'linear-gradient(0, $blue_700 6%, $blue_300 100%);',
 
-export const Navigation = styled('header', {
-  display: 'flex',
-  flexDirection: 'row',
-  justifyContent: 'space-between',
-  alignItems: 'center',
+  '> h1': {
+    padding: '2rem',
 
-  padding: '0 2rem',
+    [`@media (max-width: 1080px)`]: {
+      textAlign: 'center',
+    },
+  },
+  [`@media (max-width: 1080px)`]: {
+    height: 'inherit',
+    padding: '2rem 0',
+  },
 })
 
 export const Nav = styled('nav', {})
@@ -31,7 +33,7 @@ export const Button = styled('button', {
 })
 
 export const AboutMe = styled('div', {
-  padding: '2rem 0',
+  padding: '1rem 0',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-around',
@@ -42,13 +44,17 @@ export const Apresentation = styled('div', {
 
   '> h1': {
     padding: '2rem 0',
-    fontSize: '4em',
+    fontSize: '$2xl',
     color: '$orange_400',
   },
 
   '> p': {
     fontSize: '$lg',
     lineHeight: '1.6',
+  },
+
+  [`@media (max-width: 1080px)`]: {
+    padding: '0 2rem',
     textAlign: 'center',
   },
 })
@@ -59,6 +65,10 @@ export const Technologys = styled('div', {
     display: 'grid',
     gridTemplateColumns: 'repeat(3, 1fr)',
   },
+
+  [`@media (max-width: 1380px)`]: {
+    display: 'none',
+  },
 })
 
 export const Box = styled('div', {
@@ -68,7 +78,7 @@ export const Box = styled('div', {
     scale: 1.3,
   },
   '> img': {
-    width: 180,
-    height: 180,
+    width: '100%',
+    height: '100%',
   },
 })

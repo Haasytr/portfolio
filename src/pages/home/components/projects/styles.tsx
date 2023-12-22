@@ -4,6 +4,7 @@ export const Container = styled('div', {
   padding: '2rem 0',
 
   '> h1': {
+    color: '$orange_600',
     padding: '2rem',
   },
 })
@@ -11,8 +12,11 @@ export const Container = styled('div', {
 export const ProjectsList = styled('div', {
   display: 'grid',
   gridTemplateColumns: 'repeat(3, 1fr)',
-  gap: '2rem',
   justifyItems: 'center',
+
+  [`@media (max-width: 1080px)`]: {
+    gridTemplateColumns: '1fr',
+  },
 })
 
 export const Box = styled('a', {
@@ -22,17 +26,27 @@ export const Box = styled('a', {
   flexDirection: 'column',
 
   maxWidth: 350,
-  transition: '0.1s',
+  transition: '0.2s',
   padding: '2rem',
 
   '&:hover': {
     background: '$gray_300',
   },
 
+  '&:hover > img': {
+    opacity: 0.8,
+  },
+
   borderRadius: 5,
   '> img': {
+    objectFit: 'cover',
     width: '100%',
     height: 300,
+    borderRadius: 5,
+  },
+
+  [`@media (max-width: 1080px)`]: {
+    padding: '0',
   },
 })
 
@@ -42,6 +56,7 @@ export const Description = styled('div', {
   flexDirection: 'column',
   '> p': {
     fontSize: '$lg',
+    minHeight: 100,
   },
   '> h3': {
     color: '$orange_400',
@@ -61,18 +76,8 @@ export const TagsList = styled('div', {
   gridTemplateColumns: 'repeat(3, 1fr)',
   margin: '0.5rem 0',
   gap: '0.5rem',
-})
 
-export const Tag = styled('p', {
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-
-  height: 30,
-  minWidth: 100,
-  padding: '0 0.5rem',
-  textAlign: 'center',
-  borderRadius: 5,
-
-  backgroundColor: '$green_700',
+  [`@media (max-width: 1080px)`]: {
+    gridTemplateColumns: 'repeat(2, 1fr)',
+  },
 })

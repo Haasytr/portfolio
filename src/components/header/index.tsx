@@ -1,37 +1,25 @@
-import {
-  Container,
-  Nav,
-  Button,
-  Navigation,
-  Apresentation,
-  AboutMe,
-  Technologys,
-  Box,
-} from './styles'
+import ReactFloaterJs from 'react-floaterjs'
 
-import cake from '../../assets/techs/cakephp.jpg'
+import { Container, Apresentation, AboutMe, Technologys, Box } from './styles'
+
+import cake from '../../assets/techs/cakephp.png'
 import nest from '../../assets/techs/nest.jpg'
 import node from '../../assets/techs/node.png'
 import react from '../../assets/techs/react.png'
-import ReactFloaterJs from 'react-floaterjs'
+import next from '../../assets/techs/nextjs.png'
+import php from '../../assets/techs/php.png'
 
 export function Header() {
   return (
     <Container>
-      <Navigation>
-        <h1>Vínicius Santos</h1>
-        <Nav>
-          <Button>Sobre mim</Button>
-          <Button>Tecnologias</Button>
-          <Button>Contato</Button>
-        </Nav>
-      </Navigation>
+      <h1>Vínicius Santos</h1>
       <AboutMe>
         <Apresentation>
           <h1>Desenvolvedor FullStack</h1>
           <p>
-            Amo oque faço,sendo especializado tanto em back quanto front end.
-            Essas são algumas da tecnologias que eu já utilizei
+            gosto do que faço, estou me especializando tanto em back quanto
+            front end. Me comprometendo a continuar crescendo e buscando
+            excelência
           </p>
         </Apresentation>
 
@@ -48,14 +36,14 @@ export function Header() {
               <img src={node} />
             </Box>
             <Box>
-              <img src={nest} />
+              <img src={php} />
             </Box>
             <Box>
-              <img src={react} />
+              <img src={next} />
             </Box>
 
             <Box>
-              <img src={node} />
+              <img src={cake} />
             </Box>
           </ReactFloaterJs>
         </Technologys>

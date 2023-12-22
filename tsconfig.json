@@ -15,7 +15,7 @@
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "Node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "baseUrl": "./",                                  
@@ -26,7 +26,6 @@
     "jsx": "react-jsx"
   },
   "include": [
-    "src",
-    "src/declaration.d.ts"
+    "./src",
   ]
 }

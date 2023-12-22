@@ -15,8 +15,12 @@ export const {
       white: '#fff',
       black: '#000',
 
+      gray_100: '#f7f7f8',
       gray_300: '#d3d3d3',
       gray_500: '#4b5563',
+
+      blue_300: '#4fcefc',
+      blue_700: '#2e23fb',
 
       green_700: '#5ECED4',
 
@@ -32,6 +36,6 @@ export const {
     },
   },
   media: {
-    mobile: '(max-width: 768px)',
+    mobile: '(min-width: 768px)',
   },
 })
